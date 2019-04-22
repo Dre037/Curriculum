@@ -9,7 +9,6 @@ body {
     grid-template-columns: repeat(16, 1fr);
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, .75);
 }
 
 .container-grid > section {
@@ -36,70 +35,273 @@ body {
 
 .container-grid header div[class*="-space"] {
     background-color: rgba(255, 255, 255, 1);
-    border: 1em solid firebrick;
+    border: 1em solid lightseagreen;
 }
 
 .container-grid header .photo-space {
     min-width: 7em;
     height: 7em;
     border-radius: 2em;
+    position: relative;
 }
 
 .container-grid header .name-space {
-    width: calc(100% - 5em);
+    width: calc(100% - .5em);
     height: 4em;
-    background-color: firebrick;
+    background-color: lightseagreen;
     margin-left: -1em;
+    display: flex;
+    align-items: center;
+}
+
+.container-grid header .name-space span {
+    font-size: 2em;
+    text-indent: 2em;
+}
+
+.container-grid header .name-space span:last-of-type {
+    margin-left: auto;
+    margin-right: 1em;
 }
 
 .container-grid header .level-space {
-    width: 5em;
+    min-width: 5em;
     height: 5em;
+    margin-left: -2em;
     border-radius: 50%;
-    margin-left: auto;
-    position: absolute;
-    right: -3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.container-grid nav {
-    width: 100%;
+.container-grid header .level-space span {
+    font-size: 3.5em;
+}
+
+.container-grid .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-grid .about-me span {
+    margin: 2em 0;
+    align-self: flex-start;
+    text-indent: 1em;
+}
+
+.container-grid .about-me p {
+    text-indent: 1em;
+    font-style: italic;
+    text-align: justify;
+    width: calc(100% - 2em);
+    margin-left: 1em;
 }
 
 .container-grid nav ul {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
     display: flex;
-    align-items: stretch;
     justify-content: space-between;
+    background-color: lightseagreen;
+    list-style: none;
+}
+
+.container-grid nav ul li {
+    color: white;
+    padding: 1em 2em;
+    font-size: 1.35em;
+    cursor: pointer;
+}
+
+.container-grid section:last-of-type article {
+    height: calc(100% - 72px);
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.container-grid section:last-of-type article h3 {
+    font-size: 1.35em;
+}
+
+.container-grid #equips > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container-grid #equips > div h3:last-of-type{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-grid #equips ul {
     padding-inline-start: 0;
     margin-block-start: 0;
     margin-block-end: 0;
     list-style: none;
-    height: 3em;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+}
+
+.container-grid #equips ul li {
+    position: relative;
+    height: 7em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.container-grid #equips ul li .img-equip {
+    position: relative;
+    height: 100%;
+    width: 7em;
+}
+
+.container-grid #equips ul li .nvl-equip {
+    margin-left: 2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-grid #equips ul li .nvl-equip h3 {
     width: 100%;
 }
 
-.container-grid nav ul li {
-    display: flex;
-    text-transform: uppercase;
-    width: fit-content;
-    padding: 0 2em;
-    align-items: center;
+.container-grid #equips ul li .nvl-equip .carga {
+    margin: 0 .5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: 1px solid;
 }
 
-.container-grid nav ul li a {
-    color: goldenrod;
-    font-weight: bold;
-    text-decoration: none;
+.container-grid #equips ul li:first-child .nvl-equip .carga,
+.container-grid #equips ul li:nth-child(3) .nvl-equip .carga,
+.container-grid #equips ul li:nth-child(4) .nvl-equip .carga,
+.container-grid #equips ul li:nth-child(2) .nvl-equip .carga:first-of-type,
+.container-grid #equips ul li:nth-child(2) .nvl-equip .carga:nth-child(3),
+.container-grid #equips ul li:nth-child(2) .nvl-equip .carga:nth-child(4),
+.container-grid #equips ul li:nth-child(2) .nvl-equip .carga:nth-child(5),
+.container-grid #equips ul li:nth-child(5) .nvl-equip .carga:first-of-type,
+.container-grid #equips ul li:nth-child(5) .nvl-equip .carga:nth-child(3),
+.container-grid #equips ul li:nth-child(6) .nvl-equip .carga:first-of-type,
+.container-grid #equips ul li:nth-child(6) .nvl-equip .carga:nth-child(3),
+.container-grid #equips ul li:nth-child(6) .nvl-equip .carga:nth-child(4) {
+    background-color: lightseagreen;
+    border: 0;
+}
+
+.container-grid #equips ul li:first-child .nvl-equip .carga:nth-last-child(3),
+.container-grid #equips ul li:first-child .nvl-equip .carga:nth-last-child(2),
+.container-grid #equips ul li:first-child .nvl-equip .carga:nth-last-child(1),
+.container-grid #equips ul li:nth-child(3) .nvl-equip .carga:nth-last-child(3),
+.container-grid #equips ul li:nth-child(3) .nvl-equip .carga:nth-last-child(2),
+.container-grid #equips ul li:nth-child(3) .nvl-equip .carga:nth-last-child(1),
+.container-grid #equips ul li:nth-child(4) .nvl-equip .carga:nth-last-child(4),
+.container-grid #equips ul li:nth-child(4) .nvl-equip .carga:nth-last-child(3),
+.container-grid #equips ul li:nth-child(4) .nvl-equip .carga:nth-last-child(2),
+.container-grid #equips ul li:nth-child(4) .nvl-equip .carga:nth-last-child(1) {
+    background-color: unset;
+    border: 1px solid;
+}
+
+.container-grid #pergaminhos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.container-grid #pergaminhos h3 {
+    width: 100%;
     text-align: center;
 }
 
-.container-grid article {
-    position: absolute;
+.container-grid #pergaminhos .pergaminho {
+    width: 50%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-grid #pergaminhos .pergaminho:hover{
+    outline: 2px solid lightseagreen;
+}
+
+.container-grid #pergaminhos .pergaminho .img-perg {
+    position: relative;
     width: 100%;
-    height: calc(100% - 16em);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 1em;
-    margin: auto auto 0 auto;
-    border: 1px solid;
+    height: 50%;
+}
+
+.container-grid #pergaminhos .pergaminho .local {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-grid #pergaminhos .pergaminho .local h3 {
+    margin: 0;
+}
+
+.container-grid #pergaminhos .pergaminho .local span {
+    align-self: center;
+}
+
+.container-grid #skills ul {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    list-style: none;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+}
+
+.container-grid #skills ul li {
+    position: relative;
+    height: 7em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.container-grid #skills ul li .img-skill {
+    position: relative;
+    height: 100%;
+    width: 7em;
+}
+
+.container-grid #skills ul li .info-skill {
+    margin-left: 2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-grid #skills ul li .info-skill h3 {
+    width: 100%;
+}
+
+.container-grid section:last-of-type article {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.container-grid section:last-of-type article.visible {
+    visibility: visible;
+    opacity: 1;
 }

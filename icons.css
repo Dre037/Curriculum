@@ -1,0 +1,61 @@
+.d-icon {
+    position: absolute;
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.d-icon.dre {
+    background-image: url(./img/dre.svg);
+}
+
+.d-icon.css-bomb {
+    background-image: url(./img/css.svg);
+}
+
+.d-icon.js-mite {
+    background-image: url(./img/js.svg);
+}
+
+.d-icon.html-shield {
+    background-image: url(./img//html.svg);
+}
+
+.d-icon.inkscape-sword {
+    background-image: url(./img/inkscape.svg);
+}
+
+.d-icon.potion-angular {
+    background-image: url(./img/angularjs.svg);
+}
+
+.d-icon.potion-jquery {
+    background-image: url(./img//jquery.svg);
+}
+
+.d-icon.completo {
+    background-image: url(./img/completo.svg);
+}
+
+.d-icon.pendente {
+    background-image: url(./img/pendente.svg);
+}
+
+.d-icon.processo {
+    background-image: url(./img/processo.svg);
+}
+
+.d-icon.comunicacao {
+    background-image: url(./img/comunicacao.svg);
+}
+
+.d-icon.foco {
+    background-image: url(./img/foco.svg);
+}
+
+.d-icon.curioso {
+    background-image: url(./img/curioso.svg);
+}

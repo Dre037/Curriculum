@@ -1,49 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DDre</title>
-
+    <title>CV Dre</title>
+    
     <link rel="stylesheet" href="./index.css">
-
+    <link rel="stylesheet" href="./icons.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 <body>
     <div class="container-grid">
         <section>
             <header>
                 <div class="photo-space">
-
+                    <span class="d-icon dre"></span>
                 </div>
                 <div class="name-space">
-
+                    <span>André Pessoa</span>
+                    <span>Nível</span>
                 </div>
                 <div class="level-space">
-
+                    <span>18</span>
                 </div>
             </header>
+            <article class="about-me">
+                <h3>Informações</h3>
+                <span>Classe: Web Designer</span>
+                <span>Motivação: Buscar o novo</span>
+                <span>História: 
+                    <p>
+                        "
+                        Estou mergulhando no mundo do design cada vez mais,
+                        buscando novas formas de atingir o mesmo objetivo,
+                        penso que conseguir aquilo que almejo por incontáveis caminhos
+                        é a forma correta de dominar algo, ainda sou um pequeno peixe
+                        nesse mar imenso que é a criação.
+                        "
+                    </p>
+                </span>
+            </article>
+        </section>
+        <section ng-controller="myCtrl">
             <nav>
                 <ul>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#works">Meus Trabalhos</a></li>
+                    <li ng-click="clickedSkill()" class="skill-click">Habilidades</li>
+                    <li ng-click="clickedEquip()" class="equip-click">Equipamentos</li>
+                    <li ng-click="clickedPergam()" class="pergam-click">Pergaminhos</li>
                 </ul>
             </nav>
             <article id="skills">
-
+                <h3>Habilidades</h3>
+                <ul>
+                    <li ng-repeat="item in skill">
+                        <div class="img-skill">
+                            <span class="d-icon {{item.class}}"></span>
+                        </div>
+                        <div class="info-skill">
+                            <h3>{{item.title}}</h3>
+                            <span>{{item.text}}</span>
+                        </div>
+                    </li>
+                </ul>
             </article>
-            <article id="about">
-
+            <article id="equips">
+                <div>
+                    <h3>Equipamentos</h3>
+                    <h3>Nível</h3>
+                </div>
+                <ul>
+                    <li ng-repeat="item in equip">
+                        <div class="img-equip">
+                            <span class="d-icon {{item.class}}"></span>
+                        </div>
+                        <div class="nvl-equip">
+                            <h3>{{item.title}}</h3>
+                            <span ng-repeat="count in indice" class="carga"></span>
+                        </div>
+                    </li>
+                </ul>
             </article>
-            <article id="works">
-
+            <article id="pergaminhos">
+                <h3>Pergaminhos</h3>
+                <div class="pergaminho" ng-repeat="item in pergam">
+                    <div class="img-perg">
+                        <span class="d-icon {{item.class}}"></span>
+                    </div>
+                    <div class="local">
+                        <h3>{{item.title}}</h3>
+                        <span>{{item.status}}</span>
+                    </div>
+                </div>
             </article>
-        </section>
-        <section>
-            <canvas></canvas>
         </section>
     </div>
+    <script src="./index.js"></script>
 </body>
 </html>
